@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@100;400;700&display=swap');
+
+:root {
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Light-Gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Karla', sans-serif;
+
+}
+
+#container {
+    width: 60%;
+    height: 55%;
+    background-color: white;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "join join"
+        "price why";
+}
+
+
+.join-us {
+    grid-area: join;
+    padding: 45px;
+    width: 100%;
+    height: 100%;
+}
+
+.join-us h1 {
+    color: var(--Cyan);
+    font-weight: 700;
+    padding-bottom: 24px;
+}
+
+.join-us h2 {
+    color: var(--Bright-Yellow);
+    padding-bottom: 24px;
+}
+
+.join-us p {
+    color: var(--Grayish-Blue);
+    padding-bottom: 16px;
+}
+
+.price {
+    background-color: darkcyan;
+    grid-area: price;
+    color: var(--Light-Gray);
+    padding: 45px;
+    border-radius: 0 0 0 16px;
+    width: 100%;
+    height: 100%;
+}
+
+.price .pricetitle {
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 16px;
+}
+
+.price .price-container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+.price .price-container h2 {
+    font-size: 32px;
+    padding-right: 16px;
+}
+.price-container span{
+    color: hsla(218, 52%, 84%, 0.548);
+}
+
+.price p{
+    padding-bottom: 24px;
+    font-weight: 100;
+}
+
+.price button{
+    background-color: var(--Bright-Yellow);
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.247));
+}
+
+.why-us {
+    background-color: var(--Cyan);
+    grid-area: why;
+    color: var(--Light-Gray);
+    padding: 45px 100px 45px 45px;
+    border-radius: 0 0 16px 0;
+    width: 100%;
+    height: 100%;
+}
+
+.why-us h2{
+    padding-bottom: 16px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.why-us p{
+    padding-bottom: 5px;
+    font-weight: 100;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+}
+@media (max-width: 375px){
+    #container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
