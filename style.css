@@ -21,7 +21,7 @@ button {
 }
 
 body {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: var(--Light-Gray);
     display: flex;
@@ -33,9 +33,8 @@ body {
 }
 
 #container {
-    width: 60%;
-    height: 55%;
-    background-color: white;
+    max-width: 950px;
+    height: 700px;
     border-radius: 16px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -47,9 +46,14 @@ body {
 
 .join-us {
     grid-area: join;
+    background-color: white;
     padding: 45px;
     width: 100%;
     height: 100%;
+    border-radius: 16px 16px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .join-us h1 {
@@ -65,21 +69,26 @@ body {
 
 .join-us p {
     color: var(--Grayish-Blue);
+    font-size: 20px;
     padding-bottom: 16px;
+    line-height: 24px;
 }
 
 .price {
     background-color: darkcyan;
     grid-area: price;
     color: var(--Light-Gray);
-    padding: 45px;
     border-radius: 0 0 0 16px;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 45px;
 }
 
 .price .pricetitle {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 400;
     padding-bottom: 16px;
 }
@@ -94,20 +103,21 @@ body {
     font-size: 32px;
     padding-right: 16px;
 }
-.price-container span{
+
+.price-container span {
     color: hsla(218, 52%, 84%, 0.548);
 }
 
-.price p{
+.price p {
     padding-bottom: 24px;
     font-weight: 100;
+    font-size: 20px;
 }
 
-.price button{
+.price button {
     background-color: var(--Bright-Yellow);
     border: none;
     border-radius: 10px;
-    width: 250px;
     height: 50px;
     color: white;
     font-size: 20px;
@@ -124,25 +134,66 @@ body {
     height: 100%;
 }
 
-.why-us h2{
+.why-us h2 {
     padding-bottom: 16px;
     font-size: 20px;
     font-weight: 400;
 }
 
-.why-us p{
+.why-us p {
     padding-bottom: 5px;
     font-weight: 100;
 }
 
-footer{
-    position: absolute;
+footer {
     bottom: 0;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font-size: 10px;
+
 }
-@media (max-width: 375px){
-    #container{
+
+@media (max-width: 767px) {
+    body {
+        margin-top: 32px;
+        height: fit-content;
+    }
+
+    #container {
         display: flex;
         flex-direction: column;
+        max-width: 90%;
+        margin-bottom: 50px;
+        height: 100%;
     }
-    
+
+    .join-us{
+        padding: 24px 20px;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .join-us h1{
+        font-size: 20px;
+    }
+
+    .join-us h2{
+        font-size: 16px;
+    }
+
+    .join-us p{
+        font-size: 14px;
+
+    }
+
+    .price{
+        padding: 24px 20px;
+        border-radius: 0 0 0 0;
+    }
+
+    .why-us{
+        padding: 24px 20px;
+        border-radius: 0 0 8px 8px;
+    }
+
 }
